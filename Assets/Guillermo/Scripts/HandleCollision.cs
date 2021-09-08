@@ -13,7 +13,7 @@ public class HandleCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("hit");
+        //Debug.Log("hit");
         Rigidbody rigid = collider.gameObject.GetComponent<Rigidbody>();
         
 
