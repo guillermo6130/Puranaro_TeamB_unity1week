@@ -20,6 +20,7 @@ public class HandleController : MonoBehaviour
     private bool isMouseOnHandle = false;
     private bool isHandling = false;
     private bool isMouseMoving = true;
+    private bool isHandlestop = true;
 
     [SerializeField] GameObject HandleObject;
 
@@ -32,36 +33,42 @@ public class HandleController : MonoBehaviour
     float rotation_Handle = 0;
 
 
-
+    private void Start()
+    {
+        startHandle();
+    }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && isMouseOnHandle)
+        if (isHandlestop != true)
         {
-            isHandling = true;
-            SetPos();
-        }
-        else if (Input.GetMouseButton(0) && isHandling)
-        {
-            //Debug.Log(Input.mousePosition);
-            Rotate();
-            Invoke("calc_set", 0.1f);
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            isHandling = false;
-            SetPos();
-            Rotate();
-            
-        }
-        else
-        {
-            
-        }
-        HandleMouse();
-        //Debug.Log(angle);
+            if (Input.GetMouseButtonDown(0) && isMouseOnHandle)
+            {
+                isHandling = true;
+                SetPos();
+            }
+            else if (Input.GetMouseButton(0) && isHandling)
+            {
+                //Debug.Log(Input.mousePosition);
+                Rotate();
+                Invoke("calc_set", 0.1f);
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                isHandling = false;
+                SetPos();
+                Rotate();
 
-        MouseUpdate();
-        //Debug.Log(isMouseMoving);
+            }
+            else
+            {
+
+            }
+            HandleMouse();
+            //Debug.Log(angle);
+
+            MouseUpdate();
+            //Debug.Log(isMouseMoving);
+        }
 
     }
 
@@ -181,4 +188,14 @@ public class HandleController : MonoBehaviour
     {
         return RotateNum;
     } 
+
+    public void stopHandle()
+    {
+        isHandlestop = true;
+    }
+
+    public void startHandle()
+    {
+        isHandlestop = false;
+    }
 }
