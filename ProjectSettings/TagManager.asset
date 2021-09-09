@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SubCamera
+  - FxTemporaire
+  - LuckyBall
   layers:
   - Default
   - TransparentFX
