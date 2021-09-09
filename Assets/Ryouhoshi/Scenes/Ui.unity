@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 914141069}
   m_Layer: 0
   m_Name: Unhappy_Blue
-  m_TagString: Untagged
+  m_TagString: Unlucky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 2012239718}
   m_Layer: 0
   m_Name: Happy_Red
-  m_TagString: Untagged
+  m_TagString: Lucky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
