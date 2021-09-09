@@ -820,6 +820,7 @@ MonoBehaviour:
   FortuneBall: {fileID: 1071185917638999340, guid: 531686b5196abd646a74b9bc6409756f, type: 3}
   unFortuneBall: {fileID: 1071185917638999340, guid: 531686b5196abd646a74b9bc6409756f, type: 3}
   percentage_ball: 0.8
+  Fortuneguage: {fileID: 2091532595}
 --- !u!4 &2050609387
 Transform:
   m_ObjectHideFlags: 0

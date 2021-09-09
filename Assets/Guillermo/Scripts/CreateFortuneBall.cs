@@ -27,13 +27,20 @@ public class CreateFortuneBall : MonoBehaviour
 
     [SerializeField] float percentage_ball;
 
+    [SerializeField] GameObject Fortuneguage;
+    FortuneGauge fgauge;
 
+    private void Start()
+    {
+        fgauge = Fortuneguage.GetComponent<FortuneGauge>();
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CreateBall();
+            fgauge.addFortuneGauge(-3f);
         } 
     }
 

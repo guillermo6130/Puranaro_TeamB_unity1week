@@ -22,6 +22,7 @@ public class FortuneGauge : MonoBehaviour
     void Update()
     {
         FortuneIncByRotateNum();
+        Debug.Log(FortuneValue);
     }
 
     public void FortuneIncByRotateNum()
@@ -31,6 +32,8 @@ public class FortuneGauge : MonoBehaviour
         FortuneValue += IncRotateNum-preRotateNum;
         preRotateNum = HandleController.getRotateNum();
         //Debug.Log(FortuneValue);
+
+        
     }
 
     public void addFortuneGauge(float point)
