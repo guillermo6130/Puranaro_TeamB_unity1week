@@ -8,6 +8,8 @@ public class FortuneGauge : MonoBehaviour
     HandleController HandleController;
 
     float FortuneValue=0;
+    float preRotateNum=0;
+
     [SerializeField]float maxFortuneValue = 100;
 
     // Start is called before the first frame update
@@ -19,16 +21,22 @@ public class FortuneGauge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FortuneIncByRotateNum();
     }
 
-    public void FortuneInc()
+    public void FortuneIncByRotateNum()
     {
-        FortuneValue += HandleController.getRotateNum();
-        FortuneValue /= maxFortuneValue;
-
+        float IncRotateNum = 0;
+        IncRotateNum = HandleController.getRotateNum();
+        FortuneValue += IncRotateNum-preRotateNum;
+        preRotateNum = HandleController.getRotateNum();
+        Debug.Log(FortuneValue);
     }
 
+    public void addFortuneGauge(float point)
+    {
+        FortuneValue += point;
+    }
     
     
     
