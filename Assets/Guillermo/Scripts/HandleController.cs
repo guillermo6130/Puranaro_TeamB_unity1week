@@ -27,7 +27,7 @@ public class HandleController : MonoBehaviour
     private float cursorTimer;
     [SerializeField] float mousecheckTime = 0.2f;
 
-    float AngleSpeed;
+    float AngleSpeed=0;
     float RotateNum = 0;
     float rotation_Handle = 0;
 
@@ -171,4 +171,14 @@ public class HandleController : MonoBehaviour
             isMouseOnHandle = false;
         }
     }
+
+    public float getAngleSpeed()
+    {
+        return AngleSpeed;
+    }
+
+    public float getRotateNum()
+    {
+        return RotateNum;
+    } 
 }
