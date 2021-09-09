@@ -17,6 +17,8 @@ public class RootofHnadle : MonoBehaviour
     void Start()
     {
 
+        
+
         //AudioSource‚ðŽg‚¦‚é‚æ‚¤‚É‚·‚é
         audiosource = GetComponent<AudioSource>();
     }
