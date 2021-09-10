@@ -32,8 +32,9 @@ public class HandleController : MonoBehaviour
     float RotateNum = 0;
     float rotation_Handle = 0;
 
-    [SerializeField] AudioSource AudioSource;
+    
     [SerializeField] AudioClip GaragaraSound;
+    [SerializeField] SoundOfHandle SoundController;
 
 
 
@@ -55,13 +56,14 @@ public class HandleController : MonoBehaviour
                 //Debug.Log(Input.mousePosition);
                 Rotate();
                 Invoke("calc_set", 0.1f);
-                PlaySoundIfNotPlaying(GaragaraSound);
+                SoundController.PlaySoundIfNotPlaying(GaragaraSound,true,true);
             }
             else if (Input.GetMouseButtonUp(0))
             {
                 isHandling = false;
                 SetPos();
                 Rotate();
+                SoundController.StopSound();
 
             }
             else
@@ -204,13 +206,5 @@ public class HandleController : MonoBehaviour
         isHandlestop = false;
     }
 
-    public void PlaySoundIfNotPlaying(AudioClip source)
-    {
-        if (AudioSource.isPlaying == false)
-        {
-            AudioSource.clip = source;
-            AudioSource.Play();
-        }
-        
-    }
+    
 }
