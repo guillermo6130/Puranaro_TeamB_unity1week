@@ -9,15 +9,19 @@ public class RootofHnadle : MonoBehaviour
     [SerializeField] public AudioClip SE1; //Ô‹Ê—pŒø‰Ê‰¹‚ğ“ü‚ê‚é‚Æ‚±
     [SerializeField] public AudioClip SE2; //Â‹Ê—pŒø‰Ê‰¹‚ğ“ü‚ê‚é‚Æ‚±
 
+    [SerializeField] GameObject Fortunguage;
+    FortuneGauge fguage;
+
     public GameObject luckyEffect;
 
-  
+    [SerializeField] float mainasufortune;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        fguage = Fortunguage.GetComponent<FortuneGauge>();
 
-        
 
         //AudioSource‚ğg‚¦‚é‚æ‚¤‚É‚·‚é
         audiosource = GetComponent<AudioSource>();
@@ -55,6 +59,8 @@ public class RootofHnadle : MonoBehaviour
             Destroy(collision.gameObject);
 
             audiosource.PlayOneShot(SE2);
+
+            fguage.addFortuneGauge(mainasufortune);
         }
     }
 
