@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938773163c3be2c4ea93402b3c54bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdown: 60
+  countdown: 5
   timeText: {fileID: 2077561623}
 --- !u!4 &366303560
 Transform:
@@ -426,10 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd39054a582343940ac56e674e6ab0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createPrefab: {fileID: 0}
-  rangeA: {fileID: 0}
-  rangeB: {fileID: 0}
-  time: 0
 --- !u!4 &539344555
 Transform:
   m_ObjectHideFlags: 0
