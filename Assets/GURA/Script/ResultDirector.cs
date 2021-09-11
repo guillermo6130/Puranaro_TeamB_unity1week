@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ButtonTrigger : MonoBehaviour
+public class ResultDirector : MonoBehaviour
 {
-    [SerializeField] GameObject FadePanel;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +14,11 @@ public class ButtonTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+           
     }
 
-    public void StartClick()
+    public void TestOnClick()
     {
-        FadePanel.GetComponent<FadeIn>().Trigger = true;
-        FadePanel.transform.SetAsLastSibling();
+        SceneManager.LoadScene("Title2");
     }
 }

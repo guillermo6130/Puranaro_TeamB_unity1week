@@ -26,7 +26,7 @@ public class ScoreKeepScript : MonoBehaviour
         
     }
 
-   void Saveallvalue()
+   public void Saveallvalue()
     {
         Scorekeep = Sc.score;
     }

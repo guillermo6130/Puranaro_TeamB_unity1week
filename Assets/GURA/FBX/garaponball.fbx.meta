@@ -1,17 +1,12 @@
 fileFormatVersion: 2
-guid: dfc6c9b79e1b00741ace1102c8093851
+guid: 5e07dbd81f0f3a244892333d609cbc04
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -5349834712979385808
     second: "garapon_ball|\u7403Action"
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u30DE\u30C6\u30EA\u30A2\u30EB"
-    second: {fileID: 2100000, guid: a1eafecd07bbfc043bc8dbc6d2439c9e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

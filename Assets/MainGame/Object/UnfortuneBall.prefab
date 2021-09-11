@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7714069159487880907}
   - component: {fileID: 670659319944286608}
   - component: {fileID: 2779927255398862691}
-  - component: {fileID: 7620438829705189475}
   - component: {fileID: -4750415788601037398}
+  - component: {fileID: 8422034764276655627}
   m_Layer: 6
   m_Name: UnfortuneBall
   m_TagString: Unlucky
@@ -97,19 +97,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7620438829705189475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7894313739675543187}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e6d75339bd1dc4eb9ebbfa864dcba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.1
 --- !u!54 &-4750415788601037398
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +113,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8422034764276655627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894313739675543187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dda77e19f4145a24e9f07fb7d2b3c81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cube: {fileID: 7339627621194698268, guid: 4d9b8796741e06d40983b656bdc5487f, type: 3}
+  speed: 0.1
