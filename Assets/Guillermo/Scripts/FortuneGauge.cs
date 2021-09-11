@@ -22,7 +22,7 @@ public class FortuneGauge : MonoBehaviour
     void Update()
     {
         FortuneIncByRotateNum();
-        Debug.Log(FortuneValue);
+        //Debug.Log(FortuneValue);
     }
 
     public void FortuneIncByRotateNum()
