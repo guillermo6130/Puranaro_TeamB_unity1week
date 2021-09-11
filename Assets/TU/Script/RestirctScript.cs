@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class RestirctScript : MonoBehaviour
 {
     // カウントダウン
@@ -24,13 +23,26 @@ public class RestirctScript : MonoBehaviour
         //countdownが0以下になったとき
         if (countdown <= 0)
         {
+<<<<<<< HEAD
             //timeText.text = "終了！";
             //3秒後にCall関数を実行
             Invoke("Call", 3f);
             SceneManager.LoadScene("Retry_TitleScene");
+=======
+            timeText.text = "終了！";
+            Invoke("ChangeScene", 0.5f);
+>>>>>>> main
         }
     }
 
+<<<<<<< HEAD
     
 }       
 
+=======
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Result");
+    }
+}
+>>>>>>> main

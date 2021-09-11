@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/TU/Scene/Retry_TitleScene.unity
     guid: e6a0d0ef8f632bf47ba0db16795a849c
   - enabled: 1
@@ -17,4 +18,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TU/Scene/Title_Scene.unity
     guid: ec4a6d2d361456f489da2374fef2e92b
+=======
+    path: Assets/GURA/Scenes/TitleScene.unity
+    guid: 4d2749354c1be78498287ea690ac3ee5
+  - enabled: 1
+    path: Assets/GURA/Scenes/GameScene.unity
+    guid: 78b27228128e96a43bd4f49f7034c6f3
+  - enabled: 1
+    path: Assets/MainGame/Main.unity
+    guid: a8a561a6ae78f904caa8ead55df860d2
+  - enabled: 1
+    path: Assets/MainGame/Result.unity
+    guid: d8fa8c4c02793664cae98d69032dda78
+>>>>>>> main
   m_configObjects: {}

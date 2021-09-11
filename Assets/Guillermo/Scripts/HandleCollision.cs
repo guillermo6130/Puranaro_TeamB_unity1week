@@ -5,6 +5,7 @@ using UnityEngine;
 public class HandleCollision : MonoBehaviour
 {
     [SerializeField] float impulseMagnitude;
+    MoveToCenterScript ball;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,7 @@ public class HandleCollision : MonoBehaviour
         
 
         rigid.AddForce(impulse, ForceMode.Impulse);
+
+        
     }
 }

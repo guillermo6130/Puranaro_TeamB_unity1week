@@ -8,6 +8,10 @@ TagManager:
   - FxTemporaire
   - Unlucky
   - Lucky
+  - HandleHitBox
+  - UnLuckyBall
+  - LuckyBall
+  - Score
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ball
   - 
   - 
   - 
