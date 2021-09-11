@@ -25,9 +25,8 @@ public class RestirctScript : MonoBehaviour
         //countdown‚ª0ˆÈ‰º‚É‚È‚Á‚½‚Æ‚«
         if (countdown <= 0)
         {
-            
+            timeText.text = "I—¹I";
             SceneManager.LoadScene("Retry_TitleScene");
         }
-
     }
 }
