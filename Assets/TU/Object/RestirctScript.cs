@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class RestirctScript : MonoBehaviour
 {
@@ -25,8 +24,7 @@ public class RestirctScript : MonoBehaviour
         //countdown‚ª0ˆÈ‰º‚É‚È‚Á‚½‚Æ‚«
         if (countdown <= 0)
         {
-            
-            SceneManager.LoadScene("Retry_TitleScene");
+            timeText.text = "I—¹I";
         }
 
     }

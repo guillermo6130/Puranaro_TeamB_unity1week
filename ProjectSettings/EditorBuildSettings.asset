@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/TU/Scene/Retry_TitleScene.unity
-    guid: e6a0d0ef8f632bf47ba0db16795a849c
+  m_Scenes: []
   m_configObjects: {}
