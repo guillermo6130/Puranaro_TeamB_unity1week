@@ -68,7 +68,7 @@ public class HandleController : MonoBehaviour
             }
             else
             {
-
+                SetPos();
             }
             HandleMouse();
             //Debug.Log(angle);

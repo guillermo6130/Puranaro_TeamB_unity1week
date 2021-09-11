@@ -23,12 +23,16 @@ public class ScoreKeepScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Sc != null)
+        {
+            Saveallvalue();
+        }
     }
 
    public void Saveallvalue()
     {
         Scorekeep = Sc.score;
+        
     }
 
     public float getScore()

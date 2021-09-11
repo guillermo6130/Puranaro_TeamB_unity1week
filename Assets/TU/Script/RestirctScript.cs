@@ -15,7 +15,8 @@ public class RestirctScript : MonoBehaviour
     bool Stop=false;
 
 
-    [SerializeField] ScoreKeepScript scorekeeper;
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +33,7 @@ public class RestirctScript : MonoBehaviour
         {
             Stop = true;
             timeText.text = "èIóπÅI";
+            
             //3ïbå„Ç…Callä÷êîÇé¿çs
             Invoke("Call", 0.5f);
         }
@@ -39,7 +41,7 @@ public class RestirctScript : MonoBehaviour
 
     void Call()
     {
-        scorekeeper.Saveallvalue();
+        
         SceneManager.LoadScene("Result");
     }
     
