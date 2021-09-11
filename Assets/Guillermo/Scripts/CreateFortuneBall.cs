@@ -26,22 +26,22 @@ public class CreateFortuneBall : MonoBehaviour
     float posY;
 
     [SerializeField] float percentage_ball;
-    float percentage;
 
-    [SerializeField] float CreateSecond=0.1f;
-    float CreateCount = 0;
+    [SerializeField] GameObject Fortuneguage;
+    FortuneGauge fgauge;
 
-    
+    private void Start()
+    {
+        fgauge = Fortuneguage.GetComponent<FortuneGauge>();
+    }
     // Update is called once per frame
     void Update()
     {
-        CreateCount += Time.deltaTime;
-        if (CreateCount >= CreateSecond)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            CreateCount = 0;
             CreateBall();
-        }
-        
+            fgauge.addFortuneGauge(-3f);
+        } 
     }
 
     void CreateBall()
@@ -98,15 +98,5 @@ public class CreateFortuneBall : MonoBehaviour
         int chosenOne = Random.Range(0, UDLR.Length);
         return UDLR[chosenOne];
 
-    }
-
-    public void set100Percent()
-    {
-        percentage = 1;
-    }
-
-    public void returnPercent()
-    {
-        percentage = percentage_ball;
     }
 }

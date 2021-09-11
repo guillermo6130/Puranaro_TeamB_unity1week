@@ -12,7 +12,7 @@ public class RootofHnadle : MonoBehaviour
     [SerializeField] GameObject Fortunguage;
     FortuneGauge fguage;
 
-    //public GameObject luckyEffect;
+    public GameObject luckyEffect;
 
     [SerializeField] float mainasufortune;
 
@@ -40,7 +40,7 @@ public class RootofHnadle : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //幸運玉に触れたら幸運玉を消し、いい感じのSEを出力し、スコア加算の変数を呼び出す(オブジェクトtagで判定)
-        if (collision.gameObject.tag == "Lucky")
+        if (collision.gameObject.tag == "LuckyBall")
         {
 
             Destroy(collision.gameObject);
@@ -53,7 +53,7 @@ public class RootofHnadle : MonoBehaviour
         }
 
         //不運玉が触れてきたら不運玉を消して、いい感じのSEを出力する(オブジェクトtagで判定)
-        else if (collision.gameObject.tag == "Unlucky")
+        if (collision.gameObject.tag == "UnLuckyBall")
         {
 
             Destroy(collision.gameObject);
