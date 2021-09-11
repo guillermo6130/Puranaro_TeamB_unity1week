@@ -25,5 +25,9 @@ public class FadeOut : MonoBehaviour
     {
         GetComponent<Image>().color = new Color(red, green, blue, alfa_Out);
         alfa_Out -= speed;
+
+        //フェードアウト終了時にヒエラルキー（Canvas内）の一番上へ
+        if (alfa_Out <= 0)
+            transform.SetAsFirstSibling();
     }
 }
