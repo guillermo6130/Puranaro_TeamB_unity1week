@@ -9,6 +9,9 @@ TagManager:
   - Unlucky
   - Lucky
   - HandleHitBox
+  - UnLuckyBall
+  - LuckyBall
+  - Score
   layers:
   - Default
   - TransparentFX
