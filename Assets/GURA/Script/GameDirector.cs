@@ -5,32 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour
 {
-    //FadePanelを格納する
-    [SerializeField] GameObject FadePanel;
-    //OptionWindowを格納する2
-    [SerializeField] GameObject OptionWindow;
+    [SerializeField] GameObject FadeIn;
 
     // Start is called before the first frame update
     void Start()
     {
-        //OptionWindowオブジェクトを非表示にする
-        OptionWindow.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //FadePanelオブジェクトのA値を参照。1以上になったらシーン遷移
-        //FadeOut完了時にメインゲームシーンへ遷移
-        if(FadePanel.GetComponent<FadeIn>().alfa_In >= 1)
+        //FadeIn完了時にResultSceneへ遷移
+        if (FadeIn.GetComponent<FadeIn>().alfa_In >= 1)
         {
-            //テスト用のGameSceneに遷移している。シーン名が違う場合は（）内を変更されたし
-            SceneManager.LoadScene("GameScene");
+            //Triggerをfalseにする
+            //シーン遷移
+            FadeIn.GetComponent<FadeIn>().Trigger = false;
+            SceneManager.LoadScene("ResultScene");
         }
     }
 
-    public void OptionClick()
+    //ResultScene遷移のテストボタン用
+    public void ResultOnClick()
     {
-        OptionWindow.SetActive(true);
+        FadeIn.GetComponent<FadeIn>().Trigger = true;
+        //FadeInオブジェクトをヒエラルキー（Canvas)の一番下に
+        FadeIn.transform.SetAsLastSibling();
     }
+
 }
