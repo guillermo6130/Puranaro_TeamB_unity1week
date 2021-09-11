@@ -2023,9 +2023,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 9ce27583a900ff0468ba33add256c3a7, type: 2}
   - {fileID: 2100000, guid: a1eafecd07bbfc043bc8dbc6d2439c9e, type: 2}
   Numbers:
-  - 0
   - 3
   - 11
+  - 20
 --- !u!1 &251040061
 GameObject:
   m_ObjectHideFlags: 0
