@@ -30,9 +30,4 @@ public class ScoreKeepScript : MonoBehaviour
     {
         Scorekeep = Sc.score;
     }
-
-    public float getScore()
-    {
-        return Scorekeep;
-    }
 }
