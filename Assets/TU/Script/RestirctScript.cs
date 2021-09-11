@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class RestirctScript : MonoBehaviour
 {
     // カウントダウン
@@ -25,7 +25,13 @@ public class RestirctScript : MonoBehaviour
         if (countdown <= 0)
         {
             timeText.text = "終了！";
+            Invoke("ChangeScene", 0.5f);
         }
 
+    }
+
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Result");
     }
 }

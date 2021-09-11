@@ -25,7 +25,7 @@ public class GameDirector : MonoBehaviour
         if(FadePanel.GetComponent<FadeIn>().alfa_In >= 1)
         {
             //テスト用のGameSceneに遷移している。シーン名が違う場合は（）内を変更されたし
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("Main");
         }
     }
 
