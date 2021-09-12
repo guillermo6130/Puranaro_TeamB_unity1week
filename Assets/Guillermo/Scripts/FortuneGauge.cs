@@ -41,6 +41,7 @@ public class FortuneGauge : MonoBehaviour
         {
             FortuneBurst = true;
             createFortuneBall.set100Percent();
+            createFortuneBall.setCreateSecond();
         }
         if (FortuneBurst == true)
         {
@@ -50,6 +51,7 @@ public class FortuneGauge : MonoBehaviour
                 FortuneBurst = false;
                 FortuneValue = 0;
                 createFortuneBall.returnPercent();
+                createFortuneBall.returnCreateSecond();
             }
         }
         //Debug.Log(FortuneValue);

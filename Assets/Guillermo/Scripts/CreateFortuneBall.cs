@@ -26,17 +26,23 @@ public class CreateFortuneBall : MonoBehaviour
     float posY;
 
     [SerializeField] float percentage_ball;
-    float percentage;
+    [SerializeField]float percentageNow;
 
     [SerializeField] float CreateSecond=0.1f;
+    [SerializeField] float createSecondNow;
+    [SerializeField] float busrtSecond;
     float CreateCount = 0;
 
-    
+    private void Start()
+    {
+        percentageNow = percentage_ball;
+        createSecondNow = CreateSecond;
+    }
     // Update is called once per frame
     void Update()
     {
         CreateCount += Time.deltaTime;
-        if (CreateCount >= CreateSecond)
+        if (CreateCount >= createSecondNow)
         {
             CreateCount = 0;
             CreateBall();
@@ -48,7 +54,7 @@ public class CreateFortuneBall : MonoBehaviour
     {
         setPosition();
         float chooseball=Random.value;
-        if (chooseball < percentage_ball)
+        if (chooseball < percentageNow)
         {
             Instantiate(FortuneBall,new Vector3(posX,posY,z),Quaternion.identity);
         }
@@ -102,11 +108,21 @@ public class CreateFortuneBall : MonoBehaviour
 
     public void set100Percent()
     {
-        percentage = 1;
+        percentageNow = 1;
     }
 
     public void returnPercent()
     {
-        percentage = percentage_ball;
+        percentageNow = percentage_ball;
+    }
+
+    public void setCreateSecond()
+    {
+        createSecondNow = busrtSecond;
+    }
+
+    public void returnCreateSecond()
+    {
+        createSecondNow = CreateSecond;
     }
 }

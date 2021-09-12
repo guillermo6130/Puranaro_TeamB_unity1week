@@ -29,12 +29,15 @@ public class ChooseColorOfHukubiki : MonoBehaviour
     int calculateNumber()
     {
         float score = scorekeeper.getScore();
-        //float score = 10;
-        for(int i = 0; i < gradeNum; i++)
+        //float score = 670;
+        //Debug.Log("b");
+        for (int i = 0; i < gradeNum; i++)
         {
             if (score <= Numbers[i])
             {
+                Debug.Log("a");
                 return i;
+                
             }
         }
         return gradeNum-1;

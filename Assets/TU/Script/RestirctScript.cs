@@ -8,14 +8,19 @@ public class RestirctScript : MonoBehaviour
 {
     // カウントダウン
     public float countdown = 60.0f;
-
+    public float count = 3f;
     //時間を表示するText型の変数
     public Text timeText;
+    [SerializeField] GameObject Create;
+    [SerializeField] GameObject Handle;
+    bool Stop=true;
 
-    bool Stop=false;
 
-
-    
+    private void Start()
+    {
+        Create.SetActive(false);
+        Handle.SetActive(false) ;
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,6 +33,7 @@ public class RestirctScript : MonoBehaviour
             //時間を表示する
             timeText.text = countdown.ToString("f1");
         }
+        
         //countdownが0以下になったとき
         if (countdown <= 0 )
         {
@@ -37,6 +43,16 @@ public class RestirctScript : MonoBehaviour
             //3秒後にCall関数を実行
             Invoke("Call", 0.5f);
         }
+        if (count >= 0)
+        {
+            BeforeStart();
+        }
+        else
+        {
+            Stop = false;
+            Create.SetActive(true);
+            Handle.SetActive(true);
+        }
     }
 
     void Call()
@@ -44,6 +60,14 @@ public class RestirctScript : MonoBehaviour
         
         SceneManager.LoadScene("Result");
     }
+
+    void BeforeStart()
+    {
+        
+        count -= Time.deltaTime;
+        timeText.text = count.ToString("f1");
+    }
+
     
 }       
 

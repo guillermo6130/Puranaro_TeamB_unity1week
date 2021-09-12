@@ -18571,13 +18571,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-  - {fileID: 2100000, guid: 9ce27583a900ff0468ba33add256c3a7, type: 2}
+  - {fileID: 2100000, guid: d26843db02b905242886ad19954d8973, type: 2}
   - {fileID: 2100000, guid: 234986243ca46244c9d526f0c7a63cbc, type: 2}
+  - {fileID: 2100000, guid: 9ce27583a900ff0468ba33add256c3a7, type: 2}
   - {fileID: 2100000, guid: a1eafecd07bbfc043bc8dbc6d2439c9e, type: 2}
+  - {fileID: 2100000, guid: 6452840b16725b943a265cb822b47a96, type: 2}
   Numbers:
-  - 3
-  - 11
-  - 20
+  - 100
+  - 300
+  - 400
+  - 550
+  - 550
 --- !u!95 &1796168519
 Animator:
   serializedVersion: 3
@@ -20818,7 +20822,10 @@ MonoBehaviour:
   FortuneBall: {fileID: 1071185917638999340, guid: 531686b5196abd646a74b9bc6409756f, type: 3}
   unFortuneBall: {fileID: 1071185917638999340, guid: 531686b5196abd646a74b9bc6409756f, type: 3}
   percentage_ball: 0.8
+  percentageNow: 0
   CreateSecond: 0.1
+  createSecondNow: 0
+  busrtSecond: 0
 --- !u!4 &2081971230
 Transform:
   m_ObjectHideFlags: 0
